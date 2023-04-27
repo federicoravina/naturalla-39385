@@ -34,8 +34,11 @@
 
 .header .nav-links {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    
+    
 }
 
 
@@ -45,14 +48,14 @@
     font-style: italic;
     font-size: 1.87rem;
     color: rgb(12, 173, 12);
-
+    
 
 }
 
 .header .nav-links li {
-    display: inline-block;
-    padding: 0 60px;
-    margin: auto;
+    list-style: none;
+    padding: 0 50px;
+    
 
 
 }
@@ -116,6 +119,10 @@ h2 {
     background: rgba(255, 255, 255, 0.52);
     border-radius: 50px;
     border-color: rgba(255, 255, 255, 0.137);
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    
 }
 
 
@@ -137,6 +144,41 @@ h2 {
 
 
 }
+@media (max-width:1440px){
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    height: 90px;
+}
+.link a {
+    font-size: 24px;
+}
+.main {
+grid-template-rows: repeat(4, 197px)
+}
+.navbar{
+    display: flex;
+}
+
+}
+
+@media(max-width:1024px){
+
+}
+
+@media(max-width:768px){
+
+}
+
+@media(max-width:425px){
+
+}
+
+@media(max-width:320px){
+
+}
+
 
 /*.footer ul {
     list-style: none;
