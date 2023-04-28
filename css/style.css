@@ -62,22 +62,26 @@
     transform: scale(1.1);
 
 }
+
 /* cambio de color y efecto*/
 .header .nav-links a:hover {
     color: orangered;
 }
+
 /* caja main con grid*/
 .main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 199px)
 }
+
 /* columna de img main*/
 .presentacion {
     grid-column: 2 /3;
     justify-self: center;
     padding-top: 20px;
 }
+
 /* columna y fila  nombre de la marca */
 .title {
     grid-column: 2/3;
@@ -85,6 +89,7 @@
     justify-self: center;
     align-self: center;
 }
+
 /* estilos de titulo principal*/
 .title h1,
 h2 {
@@ -96,9 +101,11 @@ h2 {
     color: #DC1F90;
     mix-blend-mode: difference;
 }
+
 h2 {
     font-size: 35px;
 }
+
 /* ubicacion de search de pagina principal*/
 .buscador {
     grid-column: 2/3;
@@ -107,6 +114,7 @@ h2 {
     justify-self: center;
 
 }
+
 /*estilos de buscador */
 .buscador input {
     width: 1000px;
@@ -129,12 +137,21 @@ h2 {
     justify-content: space-evenly;
     height: 85px;
 }
+.link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.link p{
+    font-style: italic;
+    font-size: 22px;
+    color: rgb(12, 173, 12);
+}
 
 /* stilos de letras e iconos  */
 .link a {
+    font-size: 30px;
     text-decoration: none;
-    font-style: italic;
-    font-size: 22px;
     color: rgb(12, 173, 12);
 }
 
@@ -156,7 +173,7 @@ h2 {
     .footer {
         display: flex;
         flex-direction: column;
-        gap: 1px;
+        gap: 2px;
         height: 91px;
     }
 
@@ -164,6 +181,7 @@ h2 {
         font-size: 24px;
     }
 }
+
 /*@media de pagina principal y probablemente todas eceptuando el main*/
 @media(max-width:1024px) {
     .header {
@@ -206,7 +224,21 @@ h2 {
 
 }
 
-@media(max-width:768px) {}
+@media(max-width:768px) {
+    .buscador input{
+        width: 420px;
+    }
+    .footer{
+        flex-direction: row;
+    }
+    .link p{
+        display: none;
+    }
+    
+    .link a{
+        font-size: 50px;
+    }
+}
 
 @media(max-width:425px) {}
 
