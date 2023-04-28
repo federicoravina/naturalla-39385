@@ -8,6 +8,7 @@
 
 }
 
+/* caja maestra imagen total*/
 .index {
     background-image: url(../assets/img/foto10.png);
     background-repeat: no-repeat;
@@ -16,6 +17,7 @@
 
 }
 
+/* header maestro caja con estilos y espacio*/
 .header {
     background-color: rgba(255, 255, 0, 0.89);
     display: flex;
@@ -26,69 +28,64 @@
 
 }
 
+/* logo principas del banner */
 .header .logo img {
     height: 90px;
     width: auto;
 
 }
 
+/* caja de lista de navegacion*/
 .header .nav-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-  
-    
-    
 }
 
-
+/* estilos de lista de navegacion*/
 .header .nav-links a {
     text-decoration: none;
     text-transform: capitalize;
     font-style: italic;
     font-size: 1.87rem;
     color: rgb(12, 173, 12);
-    
-
 }
 
+/* espacio entre links de navegacion*/
 .header .nav-links li {
     list-style: none;
     padding: 0 50px;
-    
-
-
 }
 
+/* efecto de tanaño de letra en los link de navegacion */
 .header .nav-links li:hover {
     transform: scale(1.1);
 
 }
-
-.header .nav-links li :hover {
+/* cambio de color y efecto*/
+.header .nav-links a:hover {
     color: orangered;
 }
-
+/* caja main con grid*/
 .main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 199px)
 }
-
+/* columna de img main*/
 .presentacion {
     grid-column: 2 /3;
     justify-self: center;
     padding-top: 20px;
-
 }
-
+/* columna y fila  nombre de la marca */
 .title {
     grid-column: 2/3;
     grid-row: 2/3;
     justify-self: center;
     align-self: center;
 }
-
+/* estilos de titulo principal*/
 .title h1,
 h2 {
     font-size: 90px;
@@ -98,13 +95,11 @@ h2 {
     text-transform: capitalize;
     color: #DC1F90;
     mix-blend-mode: difference;
-
 }
-
 h2 {
     font-size: 35px;
 }
-
+/* ubicacion de search de pagina principal*/
 .buscador {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -112,7 +107,7 @@ h2 {
     justify-self: center;
 
 }
-
+/*estilos de buscador */
 .buscador input {
     width: 1000px;
     height: 50px;
@@ -122,10 +117,10 @@ h2 {
     font-size: 30px;
     text-transform: capitalize;
     text-align: center;
-    
+
 }
 
-
+/*footer con flex y pocicionamiento de enlaces */
 .footer {
 
     background-color: rgba(255, 255, 255, 0.932);
@@ -135,70 +130,89 @@ h2 {
     height: 85px;
 }
 
-
+/* stilos de letras e iconos  */
 .link a {
     text-decoration: none;
     font-style: italic;
     font-size: 22px;
     color: rgb(12, 173, 12);
-
-
-}
-@media (max-width:1440px){
-.footer{
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    height: 90px;
-}
-.link a {
-    font-size: 24px;
-}
-.main {
-grid-template-rows: repeat(4, 197px)
-}
-.navbar{
-    display: flex;
 }
 
+@media (max-width:1440px) {
+
+
+    .header .nav-links li {
+        padding: 0 15px;
+    }
+
+    .main {
+        grid-template-rows: repeat(4, 195px)
+    }
+
+    .buscador input {
+        width: 800px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        height: 91px;
+    }
+
+    .link a {
+        font-size: 24px;
+    }
+}
+/*@media de pagina principal y probablemente todas eceptuando el main*/
+@media(max-width:1024px) {
+    .header {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 130px;
+    }
+
+    .header .nav-links li {
+        padding: 0 10px;
+    }
+
+
+    .main {
+        grid-template-rows: repeat(4, 186px)
+    }
+
+    .presentacion img {
+        height: 175px;
+        width: auto;
+    }
+
+    .title {
+        align-self: self-start;
+    }
+
+    .title h1 {
+        font-size: 80px;
+
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .buscador input {
+        width: 600px;
+        font-size: 20px;
+    }
+
 }
 
-@media(max-width:1024px){
+@media(max-width:768px) {}
 
-}
+@media(max-width:425px) {}
 
-@media(max-width:768px){
-
-}
-
-@media(max-width:425px){
-
-}
-
-@media(max-width:320px){
-
-}
+@media(max-width:320px) {}
 
 
-/*.footer ul {
-    list-style: none;
-
-}
-
-.footer ul li {
-    display: inline-block;
-    
-    
-}
-.footer ul li a { 
-    text-decoration: none;
-    font-style: italic;
-    font-size: 22px;
-    color: rgb(12, 173, 12);
-    padding-left: 50px;
-    
-}
-*/
 /* pagina nosotros*/
 
 .nosotros,
