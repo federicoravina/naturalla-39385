@@ -35,8 +35,50 @@
 
 }
 
+.navbar {
+    display: flex;
+    position: relative;
+
+}
+
+.checkbox,
+.icons {
+    height: 73px;
+    width: 73px;
+    position: absolute;
+    top: -38px;
+    right: 33px;
+    cursor: pointer;
+
+}
+
+.icons {
+    pointer-events: none;
+    font-size: 73px;
+    color: rgb(12, 173, 12);
+    opacity: 0;
+
+}
+
+.checkbox {
+    opacity: 0;
+}
+
+.bx-menu-alt-right {
+    display: none;
+}
+
+.checkbox:checked ~ .bx-menu {
+    display: none;
+}
+
+.checkbox:checked ~ .bx-menu-alt-right {
+    display: block;
+}
+
+
 /* caja de lista de navegacion*/
-.header .nav-links {
+.nav-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,6 +91,7 @@
     font-style: italic;
     font-size: 1.87rem;
     color: rgb(12, 173, 12);
+    
 }
 
 /* espacio entre links de navegacion*/
@@ -137,12 +180,14 @@ h2 {
     justify-content: space-evenly;
     height: 85px;
 }
-.link{
+
+.link {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.link p{
+
+.link p {
     font-style: italic;
     font-size: 22px;
     color: rgb(12, 173, 12);
@@ -156,8 +201,6 @@ h2 {
 }
 
 @media (max-width:1440px) {
-
-
     .header .nav-links li {
         padding: 0 15px;
     }
@@ -225,20 +268,57 @@ h2 {
 }
 
 @media(max-width:768px) {
-    .buscador input{
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 85px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 42px;
+        right: 55px;
+        justify-content: flex-end;
+        background-color: rgba(255, 255, 0, 0.89);
+        width: 182px;
+        gap: 5px;
+    }
+    .checkbox{
+        opacity: 0;
+    }
+    .nav-links {
+        display: none;
+        
+    }
+    .checkbox:checked ~ .nav-links {
+        display: block;
+    }
+
+
+    .icons {
+        opacity: 1;
+    }
+
+    .buscador input {
         width: 420px;
     }
-    .footer{
+
+    .footer {
         flex-direction: row;
+        padding-top: 10px;
     }
-    .link p{
+
+    .link p {
         display: none;
     }
-    
-    .link a{
+
+    .link a {
         font-size: 50px;
     }
+
 }
+
 
 @media(max-width:425px) {}
 
